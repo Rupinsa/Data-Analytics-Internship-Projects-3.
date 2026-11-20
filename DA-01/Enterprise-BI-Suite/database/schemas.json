@@ -1,0 +1,1859 @@
+{
+    "DatabaseLog": [
+        {
+            "name": "DatabaseLogID",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "PostTime",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "DatabaseUser",
+            "sql_type": "sysname",
+            "size": null
+        },
+        {
+            "name": "Event",
+            "sql_type": "sysname",
+            "size": null
+        },
+        {
+            "name": "Schema",
+            "sql_type": "sysname",
+            "size": null
+        },
+        {
+            "name": "Object",
+            "sql_type": "sysname",
+            "size": null
+        },
+        {
+            "name": "TSQL",
+            "sql_type": "nvarchar",
+            "size": "max"
+        },
+        {
+            "name": "XmlEvent",
+            "sql_type": "xml",
+            "size": null
+        }
+    ],
+    "AdventureWorksDWBuildVersion": [
+        {
+            "name": "DBVersion",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "VersionDate",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "DimAccount": [
+        {
+            "name": "AccountKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ParentAccountKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "AccountCodeAlternateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ParentAccountCodeAlternateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "AccountDescription",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "AccountType",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "Operator",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "CustomMembers",
+            "sql_type": "nvarchar",
+            "size": "300"
+        },
+        {
+            "name": "ValueType",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "CustomMemberOptions",
+            "sql_type": "nvarchar",
+            "size": "200"
+        }
+    ],
+    "DimCurrency": [
+        {
+            "name": "CurrencyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CurrencyAlternateKey",
+            "sql_type": "nchar",
+            "size": "3"
+        },
+        {
+            "name": "CurrencyName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        }
+    ],
+    "DimCustomer": [
+        {
+            "name": "CustomerKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "GeographyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CustomerAlternateKey",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "Title",
+            "sql_type": "nvarchar",
+            "size": "8"
+        },
+        {
+            "name": "FirstName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "MiddleName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "LastName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "NameStyle",
+            "sql_type": "bit",
+            "size": null
+        },
+        {
+            "name": "BirthDate",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "MaritalStatus",
+            "sql_type": "nchar",
+            "size": "1"
+        },
+        {
+            "name": "Suffix",
+            "sql_type": "nvarchar",
+            "size": "10"
+        },
+        {
+            "name": "Gender",
+            "sql_type": "nvarchar",
+            "size": "1"
+        },
+        {
+            "name": "EmailAddress",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "YearlyIncome",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "TotalChildren",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "NumberChildrenAtHome",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "EnglishEducation",
+            "sql_type": "nvarchar",
+            "size": "40"
+        },
+        {
+            "name": "SpanishEducation",
+            "sql_type": "nvarchar",
+            "size": "40"
+        },
+        {
+            "name": "FrenchEducation",
+            "sql_type": "nvarchar",
+            "size": "40"
+        },
+        {
+            "name": "EnglishOccupation",
+            "sql_type": "nvarchar",
+            "size": "100"
+        },
+        {
+            "name": "SpanishOccupation",
+            "sql_type": "nvarchar",
+            "size": "100"
+        },
+        {
+            "name": "FrenchOccupation",
+            "sql_type": "nvarchar",
+            "size": "100"
+        },
+        {
+            "name": "HouseOwnerFlag",
+            "sql_type": "nchar",
+            "size": "1"
+        },
+        {
+            "name": "NumberCarsOwned",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "AddressLine1",
+            "sql_type": "nvarchar",
+            "size": "120"
+        },
+        {
+            "name": "AddressLine2",
+            "sql_type": "nvarchar",
+            "size": "120"
+        },
+        {
+            "name": "Phone",
+            "sql_type": "nvarchar",
+            "size": "20"
+        },
+        {
+            "name": "DateFirstPurchase",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "CommuteDistance",
+            "sql_type": "nvarchar",
+            "size": "15"
+        }
+    ],
+    "DimDate": [
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "FullDateAlternateKey",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "DayNumberOfWeek",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "EnglishDayNameOfWeek",
+            "sql_type": "nvarchar",
+            "size": "10"
+        },
+        {
+            "name": "SpanishDayNameOfWeek",
+            "sql_type": "nvarchar",
+            "size": "10"
+        },
+        {
+            "name": "FrenchDayNameOfWeek",
+            "sql_type": "nvarchar",
+            "size": "10"
+        },
+        {
+            "name": "DayNumberOfMonth",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "DayNumberOfYear",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "WeekNumberOfYear",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "EnglishMonthName",
+            "sql_type": "nvarchar",
+            "size": "10"
+        },
+        {
+            "name": "SpanishMonthName",
+            "sql_type": "nvarchar",
+            "size": "10"
+        },
+        {
+            "name": "FrenchMonthName",
+            "sql_type": "nvarchar",
+            "size": "10"
+        },
+        {
+            "name": "MonthNumberOfYear",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "CalendarQuarter",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "CalendarYear",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "CalendarSemester",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "FiscalQuarter",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "FiscalYear",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "FiscalSemester",
+            "sql_type": "tinyint",
+            "size": null
+        }
+    ],
+    "DimDepartmentGroup": [
+        {
+            "name": "DepartmentGroupKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ParentDepartmentGroupKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DepartmentGroupName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        }
+    ],
+    "DimEmployee": [
+        {
+            "name": "EmployeeKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ParentEmployeeKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EmployeeNationalIDAlternateKey",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "ParentEmployeeNationalIDAlternateKey",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "SalesTerritoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "FirstName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "LastName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "MiddleName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "NameStyle",
+            "sql_type": "bit",
+            "size": null
+        },
+        {
+            "name": "Title",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "HireDate",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "BirthDate",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "LoginID",
+            "sql_type": "nvarchar",
+            "size": "256"
+        },
+        {
+            "name": "EmailAddress",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "Phone",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "MaritalStatus",
+            "sql_type": "nchar",
+            "size": "1"
+        },
+        {
+            "name": "EmergencyContactName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "EmergencyContactPhone",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "SalariedFlag",
+            "sql_type": "bit",
+            "size": null
+        },
+        {
+            "name": "Gender",
+            "sql_type": "nchar",
+            "size": "1"
+        },
+        {
+            "name": "PayFrequency",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "BaseRate",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "VacationHours",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "SickLeaveHours",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "CurrentFlag",
+            "sql_type": "bit",
+            "size": null
+        },
+        {
+            "name": "SalesPersonFlag",
+            "sql_type": "bit",
+            "size": null
+        },
+        {
+            "name": "DepartmentName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "StartDate",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "EndDate",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "Status",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "EmployeePhoto",
+            "sql_type": "varbinary",
+            "size": "max"
+        }
+    ],
+    "DimGeography": [
+        {
+            "name": "GeographyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "City",
+            "sql_type": "nvarchar",
+            "size": "30"
+        },
+        {
+            "name": "StateProvinceCode",
+            "sql_type": "nvarchar",
+            "size": "3"
+        },
+        {
+            "name": "StateProvinceName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "CountryRegionCode",
+            "sql_type": "nvarchar",
+            "size": "3"
+        },
+        {
+            "name": "EnglishCountryRegionName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SpanishCountryRegionName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "FrenchCountryRegionName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "PostalCode",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "SalesTerritoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "IpAddressLocator",
+            "sql_type": "nvarchar",
+            "size": "15"
+        }
+    ],
+    "DimOrganization": [
+        {
+            "name": "OrganizationKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ParentOrganizationKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "PercentageOfOwnership",
+            "sql_type": "nvarchar",
+            "size": "16"
+        },
+        {
+            "name": "OrganizationName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "CurrencyKey",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "DimProduct": [
+        {
+            "name": "ProductKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ProductAlternateKey",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "ProductSubcategoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "WeightUnitMeasureCode",
+            "sql_type": "nchar",
+            "size": "3"
+        },
+        {
+            "name": "SizeUnitMeasureCode",
+            "sql_type": "nchar",
+            "size": "3"
+        },
+        {
+            "name": "EnglishProductName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SpanishProductName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "FrenchProductName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "StandardCost",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "FinishedGoodsFlag",
+            "sql_type": "bit",
+            "size": null
+        },
+        {
+            "name": "Color",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "SafetyStockLevel",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "ReorderPoint",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "ListPrice",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "Size",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SizeRange",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "Weight",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "DaysToManufacture",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ProductLine",
+            "sql_type": "nchar",
+            "size": "2"
+        },
+        {
+            "name": "DealerPrice",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "Class",
+            "sql_type": "nchar",
+            "size": "2"
+        },
+        {
+            "name": "Style",
+            "sql_type": "nchar",
+            "size": "2"
+        },
+        {
+            "name": "ModelName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "LargePhoto",
+            "sql_type": "varbinary",
+            "size": "max"
+        },
+        {
+            "name": "EnglishDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "FrenchDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "ChineseDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "ArabicDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "HebrewDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "ThaiDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "GermanDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "JapaneseDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "TurkishDescription",
+            "sql_type": "nvarchar",
+            "size": "400"
+        },
+        {
+            "name": "StartDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "EndDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "Status",
+            "sql_type": "nvarchar",
+            "size": "7"
+        }
+    ],
+    "DimProductCategory": [
+        {
+            "name": "ProductCategoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ProductCategoryAlternateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EnglishProductCategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SpanishProductCategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "FrenchProductCategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        }
+    ],
+    "DimProductSubcategory": [
+        {
+            "name": "ProductSubcategoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ProductSubcategoryAlternateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EnglishProductSubcategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SpanishProductSubcategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "FrenchProductSubcategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "ProductCategoryKey",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "DimPromotion": [
+        {
+            "name": "PromotionKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "PromotionAlternateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EnglishPromotionName",
+            "sql_type": "nvarchar",
+            "size": "255"
+        },
+        {
+            "name": "SpanishPromotionName",
+            "sql_type": "nvarchar",
+            "size": "255"
+        },
+        {
+            "name": "FrenchPromotionName",
+            "sql_type": "nvarchar",
+            "size": "255"
+        },
+        {
+            "name": "DiscountPct",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "EnglishPromotionType",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SpanishPromotionType",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "FrenchPromotionType",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "EnglishPromotionCategory",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SpanishPromotionCategory",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "FrenchPromotionCategory",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "StartDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "EndDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "MinQty",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "MaxQty",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "DimReseller": [
+        {
+            "name": "ResellerKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "GeographyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ResellerAlternateKey",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "Phone",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "BusinessType",
+            "sql_type": "varchar",
+            "size": "20"
+        },
+        {
+            "name": "ResellerName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "NumberEmployees",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "OrderFrequency",
+            "sql_type": "char",
+            "size": "1"
+        },
+        {
+            "name": "OrderMonth",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "FirstOrderYear",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "LastOrderYear",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ProductLine",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "AddressLine1",
+            "sql_type": "nvarchar",
+            "size": "60"
+        },
+        {
+            "name": "AddressLine2",
+            "sql_type": "nvarchar",
+            "size": "60"
+        },
+        {
+            "name": "AnnualSales",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "BankName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "MinPaymentType",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "MinPaymentAmount",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "AnnualRevenue",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "YearOpened",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "DimSalesReason": [
+        {
+            "name": "SalesReasonKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesReasonAlternateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesReasonName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SalesReasonReasonType",
+            "sql_type": "nvarchar",
+            "size": "50"
+        }
+    ],
+    "DimSalesTerritory": [
+        {
+            "name": "SalesTerritoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesTerritoryAlternateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesTerritoryRegion",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SalesTerritoryCountry",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SalesTerritoryGroup",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "SalesTerritoryImage",
+            "sql_type": "varbinary",
+            "size": "max"
+        }
+    ],
+    "DimScenario": [
+        {
+            "name": "ScenarioKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ScenarioName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        }
+    ],
+    "FactAdditionalInternationalProductDescription": [
+        {
+            "name": "ProductKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CultureName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "ProductDescription",
+            "sql_type": "nvarchar",
+            "size": "max"
+        }
+    ],
+    "FactCallCenter": [
+        {
+            "name": "FactCallCenterID",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "WageType",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "Shift",
+            "sql_type": "nvarchar",
+            "size": "20"
+        },
+        {
+            "name": "LevelOneOperators",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "LevelTwoOperators",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "TotalOperators",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "Calls",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "AutomaticResponses",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "Orders",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "IssuesRaised",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "AverageTimePerIssue",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "ServiceGrade",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "Date",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "FactCurrencyRate": [
+        {
+            "name": "CurrencyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "AverageRate",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "EndOfDayRate",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "Date",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "FactFinance": [
+        {
+            "name": "FinanceKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "OrganizationKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DepartmentGroupKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ScenarioKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "AccountKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "Amount",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "Date",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "FactInternetSales": [
+        {
+            "name": "ProductKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "OrderDateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DueDateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ShipDateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CustomerKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "PromotionKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CurrencyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesTerritoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesOrderNumber",
+            "sql_type": "nvarchar",
+            "size": "20"
+        },
+        {
+            "name": "SalesOrderLineNumber",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "RevisionNumber",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "OrderQuantity",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "UnitPrice",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "ExtendedAmount",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "UnitPriceDiscountPct",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "DiscountAmount",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "ProductStandardCost",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "TotalProductCost",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "SalesAmount",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "TaxAmt",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "Freight",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "CarrierTrackingNumber",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "CustomerPONumber",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "OrderDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "DueDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "ShipDate",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "FactInternetSalesReason": [
+        {
+            "name": "SalesOrderNumber",
+            "sql_type": "nvarchar",
+            "size": "20"
+        },
+        {
+            "name": "SalesOrderLineNumber",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "SalesReasonKey",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "FactProductInventory": [
+        {
+            "name": "ProductKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "MovementDate",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "UnitCost",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "UnitsIn",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "UnitsOut",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "UnitsBalance",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "FactResellerSales": [
+        {
+            "name": "ProductKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "OrderDateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DueDateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ShipDateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ResellerKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EmployeeKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "PromotionKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CurrencyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesTerritoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "SalesOrderNumber",
+            "sql_type": "nvarchar",
+            "size": "20"
+        },
+        {
+            "name": "SalesOrderLineNumber",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "RevisionNumber",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "OrderQuantity",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "UnitPrice",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "ExtendedAmount",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "UnitPriceDiscountPct",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "DiscountAmount",
+            "sql_type": "float",
+            "size": null
+        },
+        {
+            "name": "ProductStandardCost",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "TotalProductCost",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "SalesAmount",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "TaxAmt",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "Freight",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "CarrierTrackingNumber",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "CustomerPONumber",
+            "sql_type": "nvarchar",
+            "size": "25"
+        },
+        {
+            "name": "OrderDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "DueDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "ShipDate",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "FactSalesQuota": [
+        {
+            "name": "SalesQuotaKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EmployeeKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CalendarYear",
+            "sql_type": "smallint",
+            "size": null
+        },
+        {
+            "name": "CalendarQuarter",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "SalesAmountQuota",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "Date",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "FactSurveyResponse": [
+        {
+            "name": "SurveyResponseKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "CustomerKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ProductCategoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EnglishProductCategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "ProductSubcategoryKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "EnglishProductSubcategoryName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "Date",
+            "sql_type": "datetime",
+            "size": null
+        }
+    ],
+    "NewFactCurrencyRate": [
+        {
+            "name": "AverageRate",
+            "sql_type": "real",
+            "size": null
+        },
+        {
+            "name": "CurrencyID",
+            "sql_type": "nvarchar",
+            "size": "3"
+        },
+        {
+            "name": "CurrencyDate",
+            "sql_type": "date",
+            "size": null
+        },
+        {
+            "name": "EndOfDayRate",
+            "sql_type": "real",
+            "size": null
+        },
+        {
+            "name": "CurrencyKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "DateKey",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "ProspectiveBuyer": [
+        {
+            "name": "ProspectiveBuyerKey",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "ProspectAlternateKey",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "FirstName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "MiddleName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "LastName",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "BirthDate",
+            "sql_type": "datetime",
+            "size": null
+        },
+        {
+            "name": "MaritalStatus",
+            "sql_type": "nchar",
+            "size": "1"
+        },
+        {
+            "name": "Gender",
+            "sql_type": "nvarchar",
+            "size": "1"
+        },
+        {
+            "name": "EmailAddress",
+            "sql_type": "nvarchar",
+            "size": "50"
+        },
+        {
+            "name": "YearlyIncome",
+            "sql_type": "money",
+            "size": null
+        },
+        {
+            "name": "TotalChildren",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "NumberChildrenAtHome",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "Education",
+            "sql_type": "nvarchar",
+            "size": "40"
+        },
+        {
+            "name": "Occupation",
+            "sql_type": "nvarchar",
+            "size": "100"
+        },
+        {
+            "name": "HouseOwnerFlag",
+            "sql_type": "nchar",
+            "size": "1"
+        },
+        {
+            "name": "NumberCarsOwned",
+            "sql_type": "tinyint",
+            "size": null
+        },
+        {
+            "name": "AddressLine1",
+            "sql_type": "nvarchar",
+            "size": "120"
+        },
+        {
+            "name": "AddressLine2",
+            "sql_type": "nvarchar",
+            "size": "120"
+        },
+        {
+            "name": "City",
+            "sql_type": "nvarchar",
+            "size": "30"
+        },
+        {
+            "name": "StateProvinceCode",
+            "sql_type": "nvarchar",
+            "size": "3"
+        },
+        {
+            "name": "PostalCode",
+            "sql_type": "nvarchar",
+            "size": "15"
+        },
+        {
+            "name": "Phone",
+            "sql_type": "nvarchar",
+            "size": "20"
+        },
+        {
+            "name": "Salutation",
+            "sql_type": "nvarchar",
+            "size": "8"
+        },
+        {
+            "name": "Unknown",
+            "sql_type": "int",
+            "size": null
+        }
+    ],
+    "sysdiagrams": [
+        {
+            "name": "name",
+            "sql_type": "sysname",
+            "size": null
+        },
+        {
+            "name": "principal_id",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "diagram_id",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "version",
+            "sql_type": "int",
+            "size": null
+        },
+        {
+            "name": "definition",
+            "sql_type": "varbinary",
+            "size": "max"
+        }
+    ]
+}

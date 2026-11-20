@@ -1,0 +1,90 @@
+1391:-- Create Foreign key constraints
+1394:PRINT '*** Creating Foreign Key Constraints';
+1398:    CONSTRAINT [FK_DimAccount_DimAccount] FOREIGN KEY
+1401:    ) REFERENCES [dbo].[DimAccount] ([AccountKey]);
+1405:	CONSTRAINT [FK_DimCustomer_DimGeography] FOREIGN KEY
+1409:	REFERENCES [dbo].[DimGeography] ([GeographyKey])
+1412:    CONSTRAINT [FK_DimDepartmentGroup_DimDepartmentGroup] FOREIGN KEY
+1415:    ) REFERENCES [dbo].[DimDepartmentGroup] ([DepartmentGroupKey]);
+1419:    CONSTRAINT [FK_DimEmployee_DimSalesTerritory] FOREIGN KEY
+1422:    ) REFERENCES [dbo].[DimSalesTerritory] ([SalesTerritoryKey]),
+1423:	CONSTRAINT [FK_DimEmployee_DimEmployee] FOREIGN KEY
+1426:    ) REFERENCES [dbo].[DimEmployee] ([EmployeeKey]);
+1430:    CONSTRAINT [FK_DimGeography_DimSalesTerritory]  FOREIGN KEY
+1433:    ) REFERENCES [dbo].[DimSalesTerritory] ([SalesTerritoryKey]);
+1437:    CONSTRAINT [FK_DimOrganization_DimCurrency] FOREIGN KEY
+1440:    ) REFERENCES [dbo].[DimCurrency] ([CurrencyKey]),
+1441:    CONSTRAINT [FK_DimOrganization_DimOrganization] FOREIGN KEY
+1444:    )REFERENCES [dbo].[DimOrganization] ([OrganizationKey]);
+1448:    CONSTRAINT [FK_DimProduct_DimProductSubcategory] FOREIGN KEY
+1451:    ) REFERENCES [dbo].[DimProductSubcategory] ([ProductSubcategoryKey]);
+1455:    CONSTRAINT [FK_DimProductSubcategory_DimProductCategory] FOREIGN KEY
+1458:    ) REFERENCES [dbo].[DimProductCategory] ([ProductCategoryKey]);
+1462:	CONSTRAINT [FK_DimReseller_DimGeography] FOREIGN KEY
+1465:	) REFERENCES [dbo].[DimGeography] ([GeographyKey]);
+1469:    CONSTRAINT [FK_FactCallCenter_DimDate] FOREIGN KEY
+1472:    ) REFERENCES [dbo].[DimDate] ([DateKey]);
+1476:    CONSTRAINT [FK_FactCurrencyRate_DimDate] FOREIGN KEY
+1479:    ) REFERENCES [dbo].[DimDate] ([DateKey]),
+1480:	CONSTRAINT [FK_FactCurrencyRate_DimCurrency] FOREIGN KEY
+1483:    ) REFERENCES [dbo].[DimCurrency] ([CurrencyKey]);
+1487:    CONSTRAINT [FK_FactFinance_DimScenario] FOREIGN KEY
+1490:    ) REFERENCES [dbo].[DimScenario] ([ScenarioKey]),
+1491:    CONSTRAINT [FK_FactFinance_DimOrganization] FOREIGN KEY
+1494:    ) REFERENCES [dbo].[DimOrganization] ([OrganizationKey]),
+1495:    CONSTRAINT [FK_FactFinance_DimDepartmentGroup] FOREIGN KEY
+1498:    ) REFERENCES [dbo].[DimDepartmentGroup] ([DepartmentGroupKey]),
+1499:	CONSTRAINT [FK_FactFinance_DimDate] FOREIGN KEY
+1502:    ) REFERENCES [dbo].[DimDate] ([DateKey]),
+1503:	CONSTRAINT [FK_FactFinance_DimAccount] FOREIGN KEY
+1506:    ) REFERENCES [dbo].[DimAccount] ([AccountKey])	
+1511:    CONSTRAINT [FK_FactInternetSales_DimCurrency] FOREIGN KEY
+1514:    ) REFERENCES [dbo].[DimCurrency] ([CurrencyKey]),
+1515:	 CONSTRAINT [FK_FactInternetSales_DimCustomer] FOREIGN KEY
+1518:    ) REFERENCES [dbo].[DimCustomer] ([CustomerKey]),
+1519:	 CONSTRAINT [FK_FactInternetSales_DimDate] FOREIGN KEY
+1522:    ) REFERENCES [dbo].[DimDate] ([DateKey]),
+1523:	 CONSTRAINT [FK_FactInternetSales_DimDate1] FOREIGN KEY
+1526:    ) REFERENCES [dbo].[DimDate] ([DateKey]),
+1527:	 CONSTRAINT [FK_FactInternetSales_DimDate2] FOREIGN KEY
+1530:    ) REFERENCES [dbo].[DimDate] ([DateKey]),
+1531:	 CONSTRAINT [FK_FactInternetSales_DimProduct] FOREIGN KEY
+1534:    ) REFERENCES [dbo].[DimProduct] ([ProductKey]),
+1535:	CONSTRAINT [FK_FactInternetSales_DimPromotion] FOREIGN KEY
+1538:    ) REFERENCES [dbo].[DimPromotion] ([PromotionKey]),
+1539:	CONSTRAINT [FK_FactInternetSales_DimSalesTerritory] FOREIGN KEY
+1542:    ) REFERENCES [dbo].[DimSalesTerritory] ([SalesTerritoryKey]);
+1546:    CONSTRAINT [FK_FactInternetSalesReason_FactInternetSales] FOREIGN KEY
+1549:    ) REFERENCES [dbo].[FactInternetSales] ([SalesOrderNumber], [SalesOrderLineNumber]),
+1550:	CONSTRAINT [FK_FactInternetSalesReason_DimSalesReason] FOREIGN KEY
+1553:	) REFERENCES [dbo].[DimSalesReason] ([SalesReasonKey]);
+1557:    CONSTRAINT [FK_FactProductInventory_DimDate] FOREIGN KEY
+1560:    )REFERENCES [dbo].[DimDate] ([DateKey]),
+1561:	CONSTRAINT [FK_FactProductInventory_DimProduct] FOREIGN KEY
+1564:	) REFERENCES [dbo].[DimProduct] ([ProductKey]);
+1569:    CONSTRAINT [FK_FactResellerSales_DimCurrency] FOREIGN KEY([CurrencyKey])
+1570:			REFERENCES [dbo].[DimCurrency] ([CurrencyKey]),
+1571:	CONSTRAINT [FK_FactResellerSales_DimDate] FOREIGN KEY([OrderDateKey])
+1572:			REFERENCES [dbo].[DimDate] ([DateKey]),
+1573:	CONSTRAINT [FK_FactResellerSales_DimDate1] FOREIGN KEY([DueDateKey])
+1574:			REFERENCES [dbo].[DimDate] ([DateKey]),
+1575:	CONSTRAINT [FK_FactResellerSales_DimDate2] FOREIGN KEY([ShipDateKey])
+1576:			REFERENCES [dbo].[DimDate] ([DateKey]),
+1577:	CONSTRAINT [FK_FactResellerSales_DimEmployee] FOREIGN KEY([EmployeeKey])
+1578:			REFERENCES [dbo].[DimEmployee] ([EmployeeKey]),
+1579:	CONSTRAINT [FK_FactResellerSales_DimProduct] FOREIGN KEY([ProductKey])
+1580:			REFERENCES [dbo].[DimProduct] ([ProductKey]),
+1581:	CONSTRAINT [FK_FactResellerSales_DimPromotion] FOREIGN KEY([PromotionKey])
+1582:			REFERENCES [dbo].[DimPromotion] ([PromotionKey]),
+1583:	CONSTRAINT [FK_FactResellerSales_DimReseller] FOREIGN KEY([ResellerKey])
+1584:			REFERENCES [dbo].[DimReseller] ([ResellerKey]),
+1585:	CONSTRAINT [FK_FactResellerSales_DimSalesTerritory] FOREIGN KEY([SalesTerritoryKey])
+1586:			REFERENCES [dbo].[DimSalesTerritory] ([SalesTerritoryKey]);
+1590:    CONSTRAINT [FK_FactSalesQuota_DimEmployee] FOREIGN KEY([EmployeeKey])
+1591:			REFERENCES [dbo].[DimEmployee] ([EmployeeKey]),
+1592:    CONSTRAINT [FK_FactSalesQuota_DimDate] FOREIGN KEY([DateKey])
+1593:			REFERENCES [dbo].[DimDate] ([DateKey]);
+1597:    CONSTRAINT [FK_FactSurveyResponse_DateKey] FOREIGN KEY([DateKey])
+1598:			REFERENCES [dbo].[DimDate] ([DateKey]),
+1599:	CONSTRAINT [FK_FactSurveyResponse_CustomerKey] FOREIGN KEY([CustomerKey])
+1600:			REFERENCES [dbo].[DimCustomer] ([CustomerKey]);

@@ -1,0 +1,30 @@
+
+{
+    "North Manager": {
+        "role": "Regional Manager",
+        "allowed_regions": ["Northwest"]
+    },
+    "Central Manager": {
+        "role": "Regional Manager",
+        "allowed_regions": ["Central"]
+    },
+    "Europe Manager": {
+        "role": "Regional Manager",
+        "allowed_regions": ["France"]
+    },
+    "Demo Administrator": {
+        "role": "Administrator",
+        "allowed_regions": [
+            "Australia",
+            "Canada",
+            "Central",
+            "France",
+            "Germany",
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest",
+            "United Kingdom"
+        ]
+    }
+}

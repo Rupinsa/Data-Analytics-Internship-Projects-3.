@@ -1,0 +1,145 @@
+
+-- ============================================
+-- ENTERPRISE BI SUITE
+-- POWER BI DAX MEASURES
+-- ============================================
+
+-- 1. SALES MEASURES
+
+Total Sales =
+SUM(vw_sales[SalesAmount])
+
+
+Total Cost =
+SUM(vw_sales[TotalProductCost])
+
+
+Gross Profit =
+[Total Sales] - [Total Cost]
+
+
+Profit Margin % =
+DIVIDE(
+    [Gross Profit],
+    [Total Sales],
+    0
+)
+
+
+Total Orders =
+DISTINCTCOUNT(vw_sales[SalesOrderNumber])
+
+
+Total Quantity =
+SUM(vw_sales[OrderQuantity])
+
+
+-- 2. YEAR-TO-DATE SALES
+
+Sales YTD =
+TOTALYTD(
+    [Total Sales],
+    DimDate[FullDateAlternateKey]
+)
+
+
+-- 3. PREVIOUS YEAR SALES
+
+Previous Year Sales =
+CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR(
+        DimDate[FullDateAlternateKey]
+    )
+)
+
+
+-- 4. YEAR-OVER-YEAR GROWTH
+
+YoY Growth % =
+DIVIDE(
+    [Total Sales] - [Previous Year Sales],
+    [Previous Year Sales],
+    0
+)
+
+
+-- 5. ROLLING 12-MONTH SALES
+
+Rolling 12M Sales =
+CALCULATE(
+    [Total Sales],
+    DATESINPERIOD(
+        DimDate[FullDateAlternateKey],
+        MAX(DimDate[FullDateAlternateKey]),
+        -12,
+        MONTH
+    )
+)
+
+
+-- 6. MONTHLY AVERAGE OVER LAST 12 MONTHS
+
+Rolling 12M Average Sales =
+VAR PeriodDates =
+    DATESINPERIOD(
+        DimDate[FullDateAlternateKey],
+        MAX(DimDate[FullDateAlternateKey]),
+        -12,
+        MONTH
+    )
+
+VAR MonthsInPeriod =
+    CALCULATETABLE(
+        VALUES(DimDate[MonthStart]),
+        PeriodDates
+    )
+
+RETURN
+    AVERAGEX(
+        MonthsInPeriod,
+        CALCULATE([Total Sales])
+    )
+
+
+-- 7. FINANCE MEASURES
+
+Total Finance Amount =
+SUM(vw_finance[Amount])
+
+
+-- 8. INVENTORY MEASURES
+
+Total Units In =
+SUM(vw_inventory[UnitsIn])
+
+
+Total Units Out =
+SUM(vw_inventory[UnitsOut])
+
+
+Current Inventory Units =
+SUM(vw_inventory[UnitsBalance])
+
+
+Total Inventory Value =
+SUM(vw_inventory[InventoryValue])
+
+
+-- 9. HR MEASURES
+
+Total Employees =
+DISTINCTCOUNT(vw_hr[EmployeeKey])
+
+
+Current Employees =
+CALCULATE(
+    [Total Employees],
+    vw_hr[CurrentFlag] = TRUE()
+)
+
+
+-- 10. SALES QUOTA MEASURES
+
+Total Sales Quota =
+SUM(vw_sales_quota[SalesAmountQuota])
